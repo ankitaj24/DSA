@@ -1,0 +1,24 @@
+package apna_college_divide_nd_conquer;
+
+public class inversion_count {
+	public static void inversion(int arr[],int i) {
+		//base case
+		if(i==arr.length-1)
+		{
+			System.out.println("0");
+			return;
+		}
+		
+		//kaam
+		if(arr[i]<=arr[i+1])
+			inversion(arr,i+1);
+		else {
+			 System.out.println(arr.length-i);
+			 return;
+		}
+	}
+	public static void main(String args[]) {
+		int arr[]={2,4,1,3,5};
+		inversion(arr,0);
+	}
+}

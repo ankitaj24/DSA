@@ -1,0 +1,17 @@
+package pseudocodes;
+import java.util.*;
+public class test2 {
+	public static void main(String args[]) {
+		Scanner ip=new Scanner(System.in);
+		String s=ip.nextLine();
+		StringTokenizer str=new StringTokenizer(s,"A,B,C");
+		StringTokenizer str1=new StringTokenizer(s,"0,1");
+		while(str1.hasMoreTokens()) {
+			String op=str.nextToken();
+			String op1=str.nextToken();
+			System.out.println(op+" "+op1);
+			
+		}
+		
+	}
+}

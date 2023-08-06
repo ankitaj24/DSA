@@ -1,0 +1,28 @@
+package pseudocodes;
+import java.util.*;
+public class test2 {
+	public static void main(String args[]) {
+		try (Scanner ip = new Scanner(System.in)) {
+			String s=ip.nextLine();
+			StringTokenizer str=new StringTokenizer(s,"A,B,C");
+			StringTokenizer str1=new StringTokenizer(s,"0,1");
+			int ans=Integer.parseInt(str.nextToken());
+			while(str1.hasMoreTokens()) {
+				int op=Integer.parseInt(str.nextToken());
+				String tbh=str1.nextToken();
+				if(tbh.equals("A")) {
+					ans=ans&op;
+				}else if(tbh.equals("B")) {
+					ans=ans|op;
+				}else {
+					ans=ans^op;
+				}				
+			}
+			System.out.println(ans);
+		} catch (NumberFormatException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+}

@@ -1,0 +1,10 @@
+package apna_college_backtracking;
+
+public class keypad_combo {
+	public static void cal(String s,int n) {
+		System.out.println(s);
+	}
+	public static void main(String s) {
+		cal(s,s.length());
+	}
+}

@@ -1,0 +1,42 @@
+package stacks_queue;
+import java.util.*;
+public class Longest_valid_parentheses{
+    public static int maxLength(String S){
+        Stack<Character> s=new Stack<>();
+        int count=0,max=0;
+        for(int i=0;i<S.length();i++){
+            char ch=S.charAt(i);
+            if(ch==')'){
+                if(!s.isEmpty()){
+                	System.out.println("**count: "+count+"max: "+max+"  "+s.peek());
+                    if(s.peek()=='('){
+                        count+=2;
+                        s.pop();
+                        if(max<count)
+                        {
+                        	
+                            max=count;
+                            System.out.println("***count: "+count+"max: "+max);
+                        }
+                        
+                    }
+                    else{
+                    	
+                        count=0;
+                        System.out.println("****count: "+count+"max: "+max);
+                    }
+                }
+            }
+            else{
+            	System.out.println("*count: "+count+"max: "+max);
+                s.push(ch);
+            }
+        }
+        return max;
+    }
+    public static void main(String args[]) {
+    	//Longest_valid_parentheses ob=new Longest_valid_parentheses();
+    	
+    	System.out.println(maxLength(")()())((()))()()"));
+    }
+}

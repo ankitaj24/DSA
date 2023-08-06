@@ -1,0 +1,47 @@
+package apna_college_graph;
+import java.util.*;
+public class Shortest_src2dest {
+	public static void main(String args[]) {
+		Scanner ip=new Scanner(System.in);
+		int n=ip.nextInt();
+		int m=ip.nextInt();
+		int arr[][]=new int[n][m];
+		for(int i=0;i<arr.length;i++) {
+			for(int j=0;j<arr[0].length;j++) {
+				arr[i][j]=ip.nextInt();
+			}
+		}
+		dijkstra(arr);
+		ip.close();
+	}
+	static class Pair{
+		int i;
+		int j;
+		int dist;
+		Pair(int i,int j,int dist){
+			this.i=i;
+			this.j=j;
+			this.dist=dist;
+		}
+	}
+	public static void dijkstra(int arr[][]) {
+		int dist[][]=new int[arr.length][arr[0].length];
+		for(int i=0;i<arr.length;i++) {
+			for(int j=1;j<arr[0].length;j++) {
+				dist[i][j]=Integer.MAX_VALUE;
+			}
+		}
+		for(int i=0;i<arr.length;i++) {
+			for(int j=0;j<arr[0].length;j++) {
+				System.out.print(dist[i][j]+" ");
+			}
+			System.out.println();
+		}
+	}
+}
+/*
+3 4
+1 0 0 0
+1 1 0 1
+0 1 1 1
+*/

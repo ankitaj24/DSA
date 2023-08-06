@@ -1,0 +1,12 @@
+package pseudocodes;
+import java.util.*;
+public class test2 {
+	public static void main(String args[]) {
+		Scanner ip=new Scanner(System.in);
+		String s=ip.nextLine();
+		StringTokenizer str=new StringTokenizer(s,"A,B,C");
+		while(str.hasMoreTokens()) {
+			System.out.println(str.nextToken());
+		}
+	}
+}

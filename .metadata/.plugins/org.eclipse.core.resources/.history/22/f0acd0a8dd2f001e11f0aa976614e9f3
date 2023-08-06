@@ -1,0 +1,46 @@
+package pseudocodes;
+import java.util.*;
+public class test2 {
+	public static void main(String args[]) {
+		try (Scanner ip = new Scanner(System.in)) {
+			String s=ip.nextLine();
+			HashMap<Character,Integer> map=new HashMap<>(s.length());
+			for(int i=0;i<s.length();i++) {
+				char ch=s.charAt(i);
+				map.put(ch,map.getOrDefault(ch, 1)+1);
+			}
+			String result="";
+			for(int i=0;i<s.length();i++) {
+				char ch=s.charAt(i);
+				if(map.containsKey(ch)) {
+					result+=map.get(i);
+				}else {
+					result+="0";
+				}
+			}
+			System.out.println(result);
+		} catch (NumberFormatException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+}
+/*
+String s=ip.nextLine();
+StringTokenizer str=new StringTokenizer(s,"A,B,C");
+StringTokenizer str1=new StringTokenizer(s,"0,1");
+int ans=Integer.parseInt(str.nextToken());
+while(str1.hasMoreTokens()) {
+	int op=Integer.parseInt(str.nextToken());
+	String tbh=str1.nextToken();
+	if(tbh.equals("A")) {
+		ans=ans&op;
+	}else if(tbh.equals("B")) {
+		ans=ans|op;
+	}else {
+		ans=ans^op;
+	}				
+}
+System.out.println(ans);
+*/

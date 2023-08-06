@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;apna_college_graph.disjoint&apos; to &apos;disjoint_union_set_ds&apos;&#x0D;&#x0A;- Original project: &apos;number&apos;&#x0D;&#x0A;- Original element: &apos;apna_college_graph.disjoint&apos;&#x0D;&#x0A;- Renamed element: &apos;apna_college_graph.disjoint_union_set_ds&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;disjoint&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;apna_college_graph{disjoint.java[disjoint" matchStrategy="1" name="disjoint_union_set_ds" qualified="false" references="true" similarDeclarations="false" stamp="1688313521389" textual="false" version="1.0"/>
+</session>

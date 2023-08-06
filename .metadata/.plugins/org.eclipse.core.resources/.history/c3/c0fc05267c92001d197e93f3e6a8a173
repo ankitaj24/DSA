@@ -1,0 +1,18 @@
+package apna_college_variables_datatype;
+import java.util.*;
+public class area_square {
+	void cal(int l,int b)
+	{
+		System.out.println("Area="+l*b);
+	}
+	public static void main(String args[])
+	{
+		Scanner ip=new Scanner(System.in);
+		System.out.println("Enter the length nd breadth: ");
+		int l=ip.nextInt();
+		int b=ip.nextInt();
+		area_square ob=new area_square();
+		ob.cal(l, b);
+		ip.close();
+	}
+}

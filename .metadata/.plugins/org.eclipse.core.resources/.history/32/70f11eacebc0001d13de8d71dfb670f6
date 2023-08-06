@@ -1,0 +1,8 @@
+package number;
+import java.util.*;
+public class second_largest_in_array {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter n");
+	int n=sc.nextInt();
+	int arr[]=new int[n];
+}

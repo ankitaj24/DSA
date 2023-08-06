@@ -1,0 +1,64 @@
+package strings;
+import java.util.*;
+public class Test {
+	public static void main(String args[]) {
+//		try(Scanner ip=new Scanner(System.in)){
+//			System.out.println("Enter a string: ");
+//			String s=ip.nextLine();
+//			StringTokenizer str=new StringTokenizer(s," ");
+//			HashMap<String,Integer> map=new HashMap<>();
+//			while(str.hasMoreTokens()) {			
+//				String word=str.nextToken();			
+//				map.put(word, map.getOrDefault(word, 0)+1);
+//			}
+//			int max=Integer.MIN_VALUE;
+//			String key="";
+//			for(String i: map.keySet()) {
+//				if(max<map.get(i)) {
+//					max=map.get(i);
+//					key=i;
+//				}
+//			}
+//			System.out.println(map);
+//			System.out.println(key+" "+max);
+//		}
+		String A="aabcbd";
+		String ans="";
+		Stack<Character> s=new Stack<>();
+        //int arr[]=new int[26];
+        //arr[A.charAt(0)-'a']++;
+        ans=ans+A.charAt(0);
+        s.push(A.charAt(0));
+        for(int i=1;i<A.length();i++){
+            char ch=A.charAt(i);
+            //arr[ch-'a']++;
+            System.out.println(s);
+            if(!s.isEmpty()&&s.peek()=='#') {
+            	ans=ans+ch;
+            	s.pop();
+            	s.push(ch);
+            }
+            else {
+            	System.out.println(s);
+	            while(!s.isEmpty()&&s.peek()==ch) {
+	            	s.pop();
+	            }
+	            System.out.println(s);
+	            if(s.isEmpty()) {
+	            	ans=ans+"#";
+	            	s.push('#');
+	            }
+	            else {
+	            	ans=ans+s.peek();
+	            	char chr=s.pop();
+	            	s.push(ch);
+	            	s.push(chr);
+	            }
+	            System.out.println(s);
+            }
+            System.out.println(s);
+            
+        }
+        System.out.println("Final ans:"+ans);
+	}
+}

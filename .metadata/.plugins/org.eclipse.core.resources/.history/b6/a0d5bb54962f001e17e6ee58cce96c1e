@@ -1,0 +1,30 @@
+package pseudocodes;
+
+public class test1 {
+	public static void main(String args[]) {
+		int p=4,q=6,r=8;
+		if((q&p&r)<(8-r-q))
+			q=(p+1)+r;
+		q=10+p;
+		if(8>r||(3+8)>(q-3))
+			q=(9+5)+r;
+		else
+			r=(p+p)+p;
+		p=(p+p)+q;
+		//System.out.println(p+" "+q+" "+r);
+		//System.out.println(p+q+r);
+		System.out.println(fun(6,3));
+	}
+	public static int fun(int a,int b) {
+		if((b&a)<(a-b)&&a>3) {
+			b=b+3;
+			b=a+3;
+			b=(b+1)+a;
+			System.out.println("Ans: "+a+" "+b+Integer.toBinaryString(b));
+			return fun(a+1,b)+fun(a+b,b);
+		}
+		System.out.println(a+" "+b);
+		b=1+b+b;
+		return b-a;
+	}
+}

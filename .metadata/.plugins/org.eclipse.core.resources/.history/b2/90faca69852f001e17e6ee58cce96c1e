@@ -1,0 +1,16 @@
+package pseudocodes;
+
+public class test1 {
+	public static void main(String args[]) {
+		int p=4,q=6,r=8;
+		if((q&p&r)<(8-r-q))
+			q=(p+1)+r;
+		q=10+p;
+		if(8>r||(3+8)>(q-3))
+			q=(9+5)+r;
+		else
+			r=(p+p)+p;
+		p=(p+p)+q;
+		System.out.println(p+q+r);
+	}
+}

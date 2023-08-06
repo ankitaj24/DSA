@@ -1,0 +1,39 @@
+package bit_manipulation;
+import java.util.*;
+public class First_setBit {
+	public static void main(String args[]) {
+		Scanner ip=new Scanner(System.in);
+		System.out.println("Enter the number: ");
+		//int n=ip.nextInt();
+		//System.out.println(Integer.toBinaryString(n));
+		//String s=Integer.toBinaryString(n);
+		int nums[]= {1,2,3,4,1,2};
+		int xor=0;
+        for(int i=0;i<nums.length;i++)
+            xor^=nums[i];
+		System.out.println(xor);
+		System.out.println(Integer.toBinaryString(xor));
+		int mask=1;
+		int i=0;
+		if(xor==0)
+			i=-1;
+		else {
+			while((mask&xor)==0) {
+				xor=xor>>1;
+				i++;
+			}
+		}
+		int num1=0,num2=0;
+		for(int j=0;j<nums.length;j++) {
+			String s=Integer.toBinaryString(nums[j]);
+			System.out.println(s);
+			if(s.charAt(s.length()-1-i)=='1') {
+				num1=xor^j;
+			}
+		}
+		System.out.println(num1);
+		System.out.println(xor^num1);
+		//System.out.println(i);
+		ip.close();
+	}
+}

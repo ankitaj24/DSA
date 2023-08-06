@@ -1,0 +1,29 @@
+package pseudocodes;
+import java.util.*;
+public class test2 {
+	public static void main(String args[]) {
+		Scanner ip=new Scanner(System.in);
+		String s=ip.nextLine();
+		StringTokenizer str=new StringTokenizer(s,"A,B,C");
+		StringTokenizer str1=new StringTokenizer(s,"0,1");
+		int ans=Integer.parseInt(str.nextToken());
+		while(str1.hasMoreTokens()) {
+			int op=Integer.parseInt(str.nextToken());
+			//int op1=Integer.parseInt(str.nextToken());
+			//System.out.println(op+" "+op1);
+			if(str1.nextToken().equals("A")) {
+				ans=ans&op;
+				//ans=op&op1; 
+			}else if(str1.nextToken().equals("B")) {
+				ans=ans|op;
+				//ans=op|op1;
+			}else {
+				ans=ans^op;
+				//ans=op^op1;
+			}
+			
+		}
+		System.out.println(ans);
+		
+	}
+}

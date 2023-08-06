@@ -1,0 +1,24 @@
+package number;
+import java.util.*;
+public class second_largest_in_array {
+	public static void main(String args[]) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter n");
+		int n=sc.nextInt();
+		int arr[]=new int[n];
+		for(int i=0;i<n;i++)
+			arr[i]=sc.nextInt();
+		int max=arr[0];
+		int idx1=0;int idx2=0;
+		for(int i=1;i<n;i++) {
+			if(max<arr[i]) {
+				idx2=idx1;
+				max=arr[i];
+				idx1=i;
+			}
+			else if(arr[idx2]<arr[i]&&arr[i]<max)
+				idx2=i;
+		}
+		System.out.println(arr[idx2]);
+	}
+}

@@ -1,0 +1,27 @@
+package strings;
+import java.util.*;
+public class Permutation {
+	public static ArrayList<String> permutation(String S)
+    {
+        ArrayList<String> ans=new ArrayList<>();
+        String temp="";
+        permutation(S,ans,temp);
+        return ans;
+    }
+	public static void permutation(String s,ArrayList<String> ans,String temp){
+        if(temp.length()>=s.length()){
+            ans.add(temp);
+
+            temp=temp.substring(0,temp.length()-1);
+            return;
+        }
+        for(int i=0;i<s.length();i++){
+            temp+=s.charAt(i);
+            System.out.println(temp.length());
+            permutation(s,ans,temp);
+        }
+    } 
+	public static void main(String args[]) {
+		System.out.println(permutation("ABC"));
+	}
+}

@@ -1,0 +1,17 @@
+package bit_manipulation;
+import java.util.*;
+public class First_setBit {
+	public static void main(String args[]) {
+		Scanner ip=new Scanner(System.in);
+		System.out.println("Enter the number: ");
+		int n=ip.nextInt();
+		System.out.println(Integer.toBinaryString(n));
+		String s=Integer.toBinaryString(n);
+		int xor=Integer.parseInt(s);
+		int mask=1;
+		int i=0;
+		while((mask&xor)==1) {
+			
+		}
+	}
+}

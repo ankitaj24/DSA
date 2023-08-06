@@ -1,0 +1,37 @@
+package apna_college_backtracking;
+
+public class keypad_combo {
+	final static char L[][]={{},
+							{},
+							{'a','b','c'},//for 2
+							{'d','e','f'},//for 3
+							{'g','h','i'},//for 4
+							{'j','k','l'},//for 5
+							{'m','n','o'},//for 6
+							{'p','q','r','s'},//for 7
+							{'t','u','v'},//for 8
+							{'w','x','y','z'}};//for 9
+	public static void cal(String s1,String s2,String ans,int n) {
+		
+		//base case
+		if(n==s1.length())
+			return;
+		char ch=s1.charAt(n);
+		for(int i=0;i<s1.length();i++) {
+			
+			ans=ans+ch+s2.charAt(i);
+			System.out.println(ans+"    n="+n);
+			ans="";
+			cal(s1,s2,ans,n+1);
+			
+			
+			//ans=ans.substring(0,ans.length()-1);
+		}
+	}
+	public static void main(String args[]) {
+		String s="23";
+		if(s.length()==0)
+			System.out.println("null");
+		cal("abc","def","",0);
+	}
+}
